@@ -33,3 +33,32 @@ Twilio Phone Number: The Twilio phone number you obtained in Step 3.
 You should store these values securely and never expose them in your code or publicly.
 
 Here's how you can configure these values in a Spring Boot application using application.properties 
+
+=======================================================================================================================
+
+In your Spring Boot application, you can access the following URLs:
+
+Send OTP Form: This URL is used to initiate the OTP sending process by entering the user's phone number.
+
+
+URL: http://localhost:8080/otp/send
+Method: GET
+Use this URL to access the OTP form where users can enter their phone number to receive an OTP via SMS.
+Verify OTP: After entering the OTP received on their phone, users can use this URL to verify the OTP and complete the authentication.
+
+
+URL: http://localhost:8080/otp/verify
+Method: POST
+Use this URL to submit the entered OTP for verification.
+Success Page: This URL is displayed when the OTP verification is successful.
+
+
+URL: http://localhost:8080/otp/success
+Method: GET
+Use this URL to display a success message to the user after successful OTP verification.
+Failure Page: This URL is displayed when the OTP verification fails.
+
+
+URL: http://localhost:8080/otp/failure
+Method: GET
+Use this URL to display a failure message to the user if the entered OTP is incorrect.
