@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %> 
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>OTP Verification</title>
+</head>
+
+<body>
+	<h1>Enter OTP</h1>
+	<form th:action="@{/otp/verify}" method="post">
+		<input type="hidden" th:field="*{otp}" id="otp" name="otp"> <!-- Use a different name for the input -->
+		<label for="userOTP">Enter OTP:</label>
+		<input type="text" id="userOTP" name="userOTP" required> <!-- User's input field -->
+		<br>
+		<button type="submit">Verify</button>
+	</form>
+
+</body>
+
+</html>
